@@ -38,7 +38,7 @@
                             <label for="inputName" class="col-sm-2 col-formlabel">Name</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="inputName"
-                                       name="Name" value="<?php if (isset($serie_info)){echo $serie_info['name'];} ?>" required>
+                                       name="Name" value="<?php if (isset($serie_info)){echo $serie_name;} ?>" required>
                             </div>
                         </div>
 
@@ -46,7 +46,7 @@
                             <label for="inputCreator" class="col-sm-2 col-formlabel">Creator</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="inputCreator"
-                                       name="Creator" value="<?php if (isset($serie_info)){echo $serie_info['creator'];} ?>"required>
+                                       name="Creator" value="<?php if (isset($serie_info)){echo $creators;} ?>"required>
                             </div>
                         </div>
 
@@ -54,7 +54,7 @@
                             <label for="inputSeasons" class="col-sm-2 col-formlabel">Seasons</label>
                             <div class="col-sm-10">
                                 <input type="number" class="form-control" id="inputSeasons"
-                                       name="Seasons" value="<?php if (isset($serie_info)){echo $serie_info['seasons'];} ?>" required>
+                                       name="Seasons" value="<?php if (isset($serie_info)){echo $nbr_seasons;} ?>" required>
                             </div>
                         </div>
 

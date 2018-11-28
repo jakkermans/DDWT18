@@ -43,11 +43,16 @@
                             <th scope="row">Number of seasons</th>
                             <td><?= $nbr_seasons ?></td>
                         </tr>
+                        <tr>
+                            <th scope="row">Added by user</th>
+                            <td><?= $added_by ?></td>
+                        </tr>
                         </tbody>
                     </table>
+                    <?php if ($display_buttons) {?>
                     <div class="row">
                         <div class="col-sm-2">
-                            <a href="/DDWT18/week2/edit/?serie_id=<?= $serie_id ?>" role="button" class="btn btn-warning">Edit</a>
+                            <a href="/DDWT18/week2/edit/?serie_id=<?= $serie_id ?>&user_id=<?= $_GET['user_id']?>" role="button" class="btn btn-warning">Edit</a>
                         </div>
                         <div class="col-sm-2">
                             <form action="/DDWT18/week2/remove/" method="POST">
@@ -56,6 +61,7 @@
                             </form>
                         </div>
                     </div>
+                    <?php }?>
 
                 </div>
 
