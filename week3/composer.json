@@ -1,0 +1,12 @@
+{
+  "name": "jakkermans/DDWT18_week3",
+  "description": "",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Jannick Akkermans",
+      "email": "j.c.akkermans@student.rug.nl"
+    }
+  ]
+}
