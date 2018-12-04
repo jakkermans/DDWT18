@@ -60,7 +60,7 @@ function get_series($pdo){
 
 /**
  * Generates an array with serie information
- * @param object $pdo db object
+ * @param @param PDO $pdo database object
  * @param int $serie_id id from the serie
  * @return mixed
  */
@@ -257,4 +257,32 @@ function count_series($pdo){
 function redirect($location){
     header(sprintf('Location: %s', $location));
     die();
+}
+
+function http_content_type($content_type) {
+    header('Content-type: '.$content_type);
+}
+
+function set_cred($username, $password) {
+    return [
+        'username' => $username,
+        'password' => $password
+    ];
+}
+
+function check_cred($cred){
+    if (!isset($_SERVER['PHP_AUTH_USER'])){
+        return False;
+    }
+    else {
+        if ($_SERVER['PHP_AUTH_USER'] != $cred['username']){
+            return False;
+        }
+        elseif ($_SERVER['PHP_AUTH_PW'] != $cred['password']){
+            return False;
+        }
+        else {
+            return True;
+        }
+    }
 }
